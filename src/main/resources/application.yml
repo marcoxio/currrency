@@ -1,0 +1,26 @@
+server:
+  port: 9081
+  servlet:
+    context-path: /api/v1
+
+spring:
+  h2:
+    console:
+      enabled: true
+
+
+  #DB
+  datasource:
+    url: jdbc:h2:mem:QuoteDB
+    driver-class-name: org.h2.Driver
+    platform: h2
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+  logging:
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN : -%5p} %m%n"
