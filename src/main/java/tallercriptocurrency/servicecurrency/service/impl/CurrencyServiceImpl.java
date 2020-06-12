@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tallercriptocurrency.servicecurrency.domain.Currency;
 import tallercriptocurrency.servicecurrency.domain.Quote;
+import tallercriptocurrency.servicecurrency.domain.TipoDivisa;
 import tallercriptocurrency.servicecurrency.exceptions.CurrencyIdException;
 import tallercriptocurrency.servicecurrency.repository.CurrencyRepository;
 import tallercriptocurrency.servicecurrency.service.CurrencyService;
@@ -38,9 +39,13 @@ public class CurrencyServiceImpl implements CurrencyService {
 
     @Override
     public Currency createCurrency(Currency currency) {
-        try{
+
+        try {
             return currencyRepository.save(currency);
-        }catch(Exception e){
+
+        }
+        catch(Exception e){
+            e.printStackTrace();
             throw new CurrencyIdException("Currency Name: '" + currency.getName() + "' ya existe");
         }
 

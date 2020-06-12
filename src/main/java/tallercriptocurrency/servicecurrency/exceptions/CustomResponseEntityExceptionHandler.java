@@ -15,7 +15,7 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
 
     @ExceptionHandler
     public final ResponseEntity<Object> handlerProjectException(CurrencyIdException ex, WebRequest request){
-        //CurrencyIdExceptionResponse exceptionResponse = new CurrencyIdExceptionResponse(Long.valueOf(ex.getMessage()));
+        //  CurrencyIdExceptionResponse exceptionResponse = new CurrencyIdExceptionResponse(Long.valueOf(ex.getMessage()));
         return new ResponseEntity(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }
