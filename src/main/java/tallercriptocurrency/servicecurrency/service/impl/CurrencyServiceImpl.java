@@ -45,7 +45,7 @@ public class CurrencyServiceImpl implements CurrencyService {
 
         }
         catch(Exception e){
-            e.printStackTrace();
+            //e.printStackTrace();
             throw new CurrencyIdException("Currency Name: '" + currency.getName() + "' ya existe");
         }
 

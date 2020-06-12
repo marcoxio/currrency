@@ -20,13 +20,6 @@ Este proyecto  realiza los metodos de post y get en la creación de criptocurren
     },
     {
       "id": 2,
-      "name": "Euro",
-      "symbol": "EUR",
-      "price": 8500.4,
-      "lastUpdate": "2020-06-06"
-    },
-    {
-      "id": 3,
       "name": "Libra Esterlina",
       "symbol": "GBP",
       "price": 7500.4,
